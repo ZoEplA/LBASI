@@ -1,0 +1,117 @@
+digraph astgraph {
+  node [shape=circle, fontsize=12, fontname="Courier", height=.1];
+  ranksep=.3;
+  edge [arrowsize=.5]
+
+  node1 [label="Program"]
+  node2 [label="Block"]
+  node3 [label="VarDecl"]
+  node4 [label="number"]
+  node3 -> node4
+  node5 [label="INTEGER"]
+  node3 -> node5
+  node6 [label="VarDecl"]
+  node7 [label="a"]
+  node6 -> node7
+  node8 [label="INTEGER"]
+  node6 -> node8
+  node9 [label="VarDecl"]
+  node10 [label="b"]
+  node9 -> node10
+  node11 [label="INTEGER"]
+  node9 -> node11
+  node12 [label="VarDecl"]
+  node13 [label="c"]
+  node12 -> node13
+  node14 [label="INTEGER"]
+  node12 -> node14
+  node15 [label="VarDecl"]
+  node16 [label="x"]
+  node15 -> node16
+  node17 [label="INTEGER"]
+  node15 -> node17
+  node18 [label="VarDecl"]
+  node19 [label="y"]
+  node18 -> node19
+  node20 [label="REAL"]
+  node18 -> node20
+  node21 [label="Compound"]
+  node22 [label="Compound"]
+  node23 [label=":="]
+  node24 [label="number"]
+  node25 [label="2"]
+  node23 -> node24
+  node23 -> node25
+  node22 -> node23
+  node26 [label=":="]
+  node27 [label="a"]
+  node28 [label="number"]
+  node26 -> node27
+  node26 -> node28
+  node22 -> node26
+  node29 [label=":="]
+  node30 [label="b"]
+  node31 [label="+"]
+  node32 [label="*"]
+  node33 [label="10"]
+  node34 [label="a"]
+  node32 -> node33
+  node32 -> node34
+  node35 [label="DIV"]
+  node36 [label="*"]
+  node37 [label="10"]
+  node38 [label="number"]
+  node36 -> node37
+  node36 -> node38
+  node39 [label="4"]
+  node35 -> node36
+  node35 -> node39
+  node31 -> node32
+  node31 -> node35
+  node29 -> node30
+  node29 -> node31
+  node22 -> node29
+  node40 [label=":="]
+  node41 [label="c"]
+  node42 [label="-"]
+  node43 [label="a"]
+  node44 [label="unary -"]
+  node45 [label="b"]
+  node44 -> node45
+  node42 -> node43
+  node42 -> node44
+  node40 -> node41
+  node40 -> node42
+  node22 -> node40
+  node21 -> node22
+  node46 [label=":="]
+  node47 [label="x"]
+  node48 [label="11"]
+  node46 -> node47
+  node46 -> node48
+  node21 -> node46
+  node49 [label=":="]
+  node50 [label="y"]
+  node51 [label="+"]
+  node52 [label="/"]
+  node53 [label="20"]
+  node54 [label="7"]
+  node52 -> node53
+  node52 -> node54
+  node55 [label="3.14"]
+  node51 -> node52
+  node51 -> node55
+  node49 -> node50
+  node49 -> node51
+  node21 -> node49
+  node56 [label="NoOp"]
+  node21 -> node56
+  node2 -> node3
+  node2 -> node6
+  node2 -> node9
+  node2 -> node12
+  node2 -> node15
+  node2 -> node18
+  node2 -> node21
+  node1 -> node2
+}
